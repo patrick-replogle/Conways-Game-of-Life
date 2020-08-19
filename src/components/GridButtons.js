@@ -14,11 +14,11 @@ const GridButtons = ({
   const [intervalId, setInvertalId] = useState(null);
 
   const startGame = () => {
-    let intId = setInterval(async () => {
-      let newBoard = await generateNewBoard(board);
+    let intId = setInterval(() => {
+      let newBoard = generateNewBoard(board, setGenCount, genCount);
       setBoard(newBoard);
-      setGenCount(genCount + 1);
-    }, 500);
+      setGenCount(genCount++);
+    }, 200);
     setInvertalId(intId);
   };
 

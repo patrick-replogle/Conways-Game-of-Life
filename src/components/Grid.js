@@ -27,7 +27,7 @@ const Grid = () => {
         genCount={genCount}
         setGenCount={setGenCount}
       />
-      <Presets />
+      <Presets setBoard={setBoard} gridSize={gridSize} />
     </div>
   );
 };
