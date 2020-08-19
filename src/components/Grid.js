@@ -15,6 +15,7 @@ const Grid = () => {
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
+      <h2>Generations: {genCount}</h2>
       <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
       <GridButtons
         setBoard={setBoard}
