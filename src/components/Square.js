@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-const Square = ({ square, board }) => {
+const Square = ({ square, board, isGenerating }) => {
   const [box, setBox] = useState(square.status);
 
   const toggleStatus = (square) => {
     const { status, location } = square;
 
-    if (status === 0) {
+    if (!isGenerating && status === 0) {
       board[location[0]][location[1]]["status"] = 1;
       setBox(square.status);
-    } else if (status === 1) {
+    } else if (!isGenerating && status === 1) {
       board[location[0]][location[1]]["status"] = 0;
       setBox(square.status);
     }
