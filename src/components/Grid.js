@@ -12,8 +12,9 @@ const Grid = () => {
   const [gridSize, setGridSize] = useState(25);
   const [board, setBoard] = useState(createNewBoard(gridSize));
   return (
-    <div>
-      <p>Game</p>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <Board board={board} setBoard={setBoard} />
       <GridButtons />
       <Presets />
