@@ -2,7 +2,7 @@ import React from "react";
 
 import Square from "./Square";
 
-const Board = ({ board, setBoard, isGenerating }) => {
+const Board = ({ board, isGenerating }) => {
   return (
     <div style={{ border: "1px solid black", marginBottom: "10px" }}>
       {board.map((arr, index) => {

@@ -6,7 +6,6 @@ const GridButtons = ({
   board,
   setBoard,
   gridSize,
-  isGenerating,
   setIsGenerating,
   genCount,
   setGenCount,
@@ -15,7 +14,8 @@ const GridButtons = ({
 
   const startGame = () => {
     let intId = setInterval(() => {
-      let newBoard = generateNewBoard(board, setGenCount, genCount);
+      let newBoard = generateNewBoard(board);
+      board = newBoard;
       setBoard(newBoard);
       setGenCount(genCount++);
     }, 200);

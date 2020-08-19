@@ -62,25 +62,31 @@ export const calculateNeighborCells = (arr, i, j) => {
 
 export const calculateLifeExpectancy = (arr, i, j, cellCount) => {
   if (arr[i][j]["status"] === 0 && cellCount === 3) {
-    arr[i][j]["status"] = 1;
+    return 1;
   } else if (arr[i][j]["status"] === 1 && (cellCount < 2 || cellCount > 3)) {
-    arr[i][j]["status"] = 0;
+    return 0;
   } else if (
     arr[i][j]["status"] === 1 &&
     (cellCount === 2 || cellCount === 3)
   ) {
-    return;
+    return 1;
+  } else {
+    return 0;
   }
 };
 
 export const generateNewBoard = (oldBoard) => {
-  let newBoard = oldBoard.map((a) => a.slice());
+  let newBoard = [];
 
-  for (let i = 0; i < newBoard.length; i++) {
-    for (let j = 0; j < newBoard[i].length; j++) {
-      let cellCount = calculateNeighborCells(newBoard, i, j);
-      calculateLifeExpectancy(newBoard, i, j, cellCount);
+  for (let i = 0; i < oldBoard.length; i++) {
+    let subArray = [];
+    for (let j = 0; j < oldBoard.length; j++) {
+      let cellCount = calculateNeighborCells(oldBoard, i, j);
+      let num = calculateLifeExpectancy(oldBoard, i, j, cellCount);
+
+      subArray.push({ status: num, location: [i, j] });
     }
+    newBoard.push(subArray);
   }
   return newBoard;
 };
