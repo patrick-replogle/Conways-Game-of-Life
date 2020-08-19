@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Grid from "./components/Grid";
+import GridButtons from "./components/GridButtons";
+import Presets from "./components/Presets";
+import Rules from "./components/Rules";
 
-function App() {
+import { createNewBoard } from "./functions";
+
+import "./App.css";
+
+const App = () => {
+  const [genCount, setGenCount] = useState(0);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [gridSize, setGridSize] = useState(25);
+  const [board, setBoard] = useState(createNewBoard(gridSize));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Grid />
     </div>
   );
-}
+};
 
 export default App;
