@@ -1,25 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { createNewBoard } from "../functions";
+import { createNewBoard, generateNewBoard } from "../functions";
 
-const GridButtons = ({ setBoard, gridSize, setIsGenerating }) => {
+const GridButtons = ({
+  board,
+  setBoard,
+  gridSize,
+  isGenerating,
+  setIsGenerating,
+  genCount,
+  setGenCount,
+}) => {
+  const [intervalId, setInvertalId] = useState(null);
+
   const startGame = () => {
-    setIsGenerating(true);
+    let intId = setInterval(async () => {
+      let newBoard = await generateNewBoard(board);
+      setBoard(newBoard);
+      setGenCount(genCount + 1);
+    }, 500);
+    setInvertalId(intId);
   };
 
   const pauseGame = () => {
     setIsGenerating(false);
+    clearInterval(intervalId);
   };
 
   const clearBoard = () => {
     setIsGenerating(false);
     setBoard(createNewBoard(gridSize));
+    setGenCount(0);
+    clearInterval(intervalId);
   };
 
   return (
     <div style={{ marginTop: "10px" }}>
       <button
-        onClick={startGame}
+        onClick={() => {
+          setIsGenerating(true);
+          startGame();
+        }}
         className="gameButton"
         style={{ background: "green" }}
       >

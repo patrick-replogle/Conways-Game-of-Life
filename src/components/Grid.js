@@ -19,9 +19,13 @@ const Grid = () => {
       <h3>Generations: {genCount}</h3>
       <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
       <GridButtons
+        board={board}
         setBoard={setBoard}
         gridSize={gridSize}
+        isGenerating={isGenerating}
         setIsGenerating={setIsGenerating}
+        genCount={genCount}
+        setGenCount={setGenCount}
       />
       <Presets />
     </div>

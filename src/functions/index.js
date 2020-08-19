@@ -77,7 +77,7 @@ export const generateNewBoard = (oldBoard) => {
   let newBoard = oldBoard.map((a) => a.slice());
 
   for (let i = 0; i < newBoard.length; i++) {
-    for (let j = 0; i < newBoard[i].length; i++) {
+    for (let j = 0; j < newBoard[i].length; j++) {
       let cellCount = calculateNeighborCells(newBoard, i, j);
       calculateLifeExpectancy(newBoard, i, j, cellCount);
     }
