@@ -1,6 +1,18 @@
 import React from "react";
 
 const GridButtons = (props) => {
+  const startGame = () => {
+    // logic goes here
+  };
+
+  const pauseGame = () => {
+    // logic goes here
+  };
+
+  const clearBoard = () => {
+    // logic goes here
+  };
+
   return (
     <div>
       <button>Start</button>
