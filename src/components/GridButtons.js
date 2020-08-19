@@ -14,7 +14,7 @@ const GridButtons = (props) => {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "10px" }}>
       <button>Start</button>
       <button>Pause</button>
       <button>Clear</button>
