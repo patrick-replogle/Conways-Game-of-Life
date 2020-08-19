@@ -18,13 +18,27 @@ const GridButtons = ({ setBoard, gridSize, setIsGenerating }) => {
 
   return (
     <div style={{ marginTop: "10px" }}>
-      <button onClick={startGame} className="button">
+      <button
+        onClick={startGame}
+        className="gameButton"
+        style={{ background: "green" }}
+      >
         Start
       </button>
-      <button onClick={pauseGame} className="button">
+
+      <button
+        onClick={pauseGame}
+        className="gameButton"
+        style={{ background: "orange" }}
+      >
         Pause
       </button>
-      <button onClick={clearBoard} className="button">
+
+      <button
+        onClick={clearBoard}
+        className="gameButton"
+        style={{ background: "red" }}
+      >
         Clear
       </button>
     </div>

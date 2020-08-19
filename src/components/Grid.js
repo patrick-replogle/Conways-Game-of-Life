@@ -11,11 +11,12 @@ const Grid = () => {
   const [isGenerating, setIsGenerating] = useState(false);
   const [gridSize, setGridSize] = useState(25);
   const [board, setBoard] = useState(createNewBoard(gridSize));
+
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h2>Generations: {genCount}</h2>
+      <h3>Generations: {genCount}</h3>
       <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
       <GridButtons
         setBoard={setBoard}
