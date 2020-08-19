@@ -16,7 +16,7 @@ const Grid = () => {
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       <Board board={board} setBoard={setBoard} />
-      <GridButtons />
+      <GridButtons setBoard={setBoard} gridSize={gridSize} />
       <Presets />
     </div>
   );

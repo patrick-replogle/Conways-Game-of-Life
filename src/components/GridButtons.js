@@ -1,6 +1,8 @@
 import React from "react";
 
-const GridButtons = (props) => {
+import { createNewBoard } from "../functions";
+
+const GridButtons = ({ setBoard, gridSize }) => {
   const startGame = () => {
     // logic goes here
   };
@@ -10,14 +12,14 @@ const GridButtons = (props) => {
   };
 
   const clearBoard = () => {
-    // logic goes here
+    setBoard(createNewBoard(gridSize));
   };
 
   return (
     <div style={{ marginTop: "10px" }}>
       <button>Start</button>
       <button>Pause</button>
-      <button>Clear</button>
+      <button onClick={clearBoard}>Clear</button>
     </div>
   );
 };
