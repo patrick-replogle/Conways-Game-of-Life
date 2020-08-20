@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { createNewBoard, updateBoard } from "../functions";
+import { createNewBoard, updateBoard } from "../functions/game";
 
 const Controls = ({
   board,
@@ -10,9 +10,9 @@ const Controls = ({
   setIsGenerating,
   genCount,
   setGenCount,
+  intervalId,
+  setInvertalId,
 }) => {
-  const [intervalId, setInvertalId] = useState(null);
-
   const startGame = () => {
     let intId = setInterval(() => {
       let newBoard = updateBoard(board);

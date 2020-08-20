@@ -4,13 +4,14 @@ import Board from "./Board";
 import Controls from "./Controls";
 import Presets from "./Presets";
 
-import { createNewBoard } from "../functions";
+import { createNewBoard } from "../functions/game";
 
 const Game = () => {
   const [genCount, setGenCount] = useState(0);
   const [isGenerating, setIsGenerating] = useState(false);
   const [gridSize, setGridSize] = useState(25);
   const [board, setBoard] = useState(createNewBoard(gridSize));
+  const [intervalId, setInvertalId] = useState(null);
 
   return (
     <div
@@ -26,8 +27,17 @@ const Game = () => {
         setIsGenerating={setIsGenerating}
         genCount={genCount}
         setGenCount={setGenCount}
+        intervalId={intervalId}
+        setInvertalId={setInvertalId}
       />
-      <Presets setBoard={setBoard} gridSize={gridSize} />
+      <Presets
+        setBoard={setBoard}
+        gridSize={gridSize}
+        setIsGenerating={setIsGenerating}
+        setGenCount={setGenCount}
+        intervalId={intervalId}
+        setGenCount={setGenCount}
+      />
     </div>
   );
 };

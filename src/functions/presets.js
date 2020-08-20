@@ -1,4 +1,38 @@
-import { createNewBoard } from "./index";
+import { createNewBoard } from "./game";
+
+export const togglePresets = (input, cb, size) => {
+  switch (input) {
+    case "none":
+      cb(createNewBoard(size));
+      break;
+    case "random":
+      cb(generateRandomBoard(size));
+      break;
+    case "acorn":
+      cb(acorn(size));
+      break;
+    case "still life":
+      cb(stillLife(size));
+      break;
+    case "pulsar":
+      cb(pulsar(size));
+      break;
+    case "pulsar generator":
+      cb(pulsarGenerator(size));
+      break;
+    case "queen bee shuttle":
+      cb(queenBeeShuttle(size));
+      break;
+    case "spaceship":
+      cb(spaceShips(size));
+      break;
+    case "pentadecatchlon":
+      cb(pentadecathlon(size));
+      break;
+    default:
+      cb(createNewBoard(size));
+  }
+};
 
 export const pulsar = (gridSize) => {
   let newBoard = createNewBoard(gridSize);
@@ -253,3 +287,23 @@ export const spaceShips = (gridSize) => {
 
   return newBoard;
 };
+
+const acorn = (gridSize) => {
+  let newBoard = createNewBoard(gridSize);
+  newBoard[8][13]["status"] = 1;
+  newBoard[10][13]["status"] = 1;
+  newBoard[10][12]["status"] = 1;
+  newBoard[9][15]["status"] = 1;
+  newBoard[10][16]["status"] = 1;
+  newBoard[10][17]["status"] = 1;
+  newBoard[10][18]["status"] = 1;
+
+  return newBoard;
+};
+
+{
+  /* 
+<option value="circle of fire">Circle of Fire</option>
+<option value="glidar">Glidar</option>
+ */
+}
