@@ -7,9 +7,11 @@ const Square = ({ square, board, isGenerating }) => {
     const { status, location } = square;
 
     if (!isGenerating && status === 0) {
+      console.log(location);
       board[location[0]][location[1]]["status"] = 1;
       setBox(square.status);
     } else if (!isGenerating && status === 1) {
+      console.log(location);
       board[location[0]][location[1]]["status"] = 0;
       setBox(square.status);
     }

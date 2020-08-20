@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-import { createNewBoard, generateNewBoard } from "../functions";
+import { createNewBoard, updateBoard } from "../functions";
 
-const GridButtons = ({
+const Controls = ({
   board,
   setBoard,
   gridSize,
+  isGenerating,
   setIsGenerating,
   genCount,
   setGenCount,
@@ -14,11 +15,11 @@ const GridButtons = ({
 
   const startGame = () => {
     let intId = setInterval(() => {
-      let newBoard = generateNewBoard(board);
+      let newBoard = updateBoard(board);
       board = newBoard;
       setBoard(newBoard);
       setGenCount(genCount++);
-    }, 200);
+    }, 100);
     setInvertalId(intId);
   };
 
@@ -38,8 +39,12 @@ const GridButtons = ({
     <div style={{ marginTop: "10px" }}>
       <button
         onClick={() => {
-          setIsGenerating(true);
-          startGame();
+          if (!isGenerating) {
+            setIsGenerating(true);
+            startGame();
+          } else {
+            pauseGame();
+          }
         }}
         className="gameButton"
         style={{ background: "green" }}
@@ -66,4 +71,4 @@ const GridButtons = ({
   );
 };
 
-export default GridButtons;
+export default Controls;

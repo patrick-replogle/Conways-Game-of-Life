@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 import Board from "./Board";
-import GridButtons from "./GridButtons";
+import Controls from "./Controls";
 import Presets from "./Presets";
 
 import { createNewBoard } from "../functions";
 
-const Grid = () => {
+const Game = () => {
   const [genCount, setGenCount] = useState(0);
   const [isGenerating, setIsGenerating] = useState(false);
   const [gridSize, setGridSize] = useState(25);
@@ -18,7 +18,7 @@ const Grid = () => {
     >
       <h3>Generations: {genCount}</h3>
       <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
-      <GridButtons
+      <Controls
         board={board}
         setBoard={setBoard}
         gridSize={gridSize}
@@ -32,4 +32,4 @@ const Grid = () => {
   );
 };
 
-export default Grid;
+export default Game;
