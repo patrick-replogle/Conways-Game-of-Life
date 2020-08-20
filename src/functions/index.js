@@ -75,7 +75,7 @@ export const calculateLifeExpectancy = (arr, i, j, cellCount) => {
   }
 };
 
-export const generateNewBoard = (oldBoard) => {
+export const updateBoard = (oldBoard) => {
   let newBoard = [];
 
   for (let i = 0; i < oldBoard.length; i++) {
