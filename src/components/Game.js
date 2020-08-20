@@ -36,7 +36,6 @@ const Game = () => {
         setIsGenerating={setIsGenerating}
         setGenCount={setGenCount}
         intervalId={intervalId}
-        setGenCount={setGenCount}
       />
     </div>
   );
