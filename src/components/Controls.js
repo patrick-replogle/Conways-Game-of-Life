@@ -19,7 +19,7 @@ const Controls = ({
       board = newBoard;
       setBoard(newBoard);
       setGenCount(genCount++);
-    }, 200);
+    }, 100);
     setInvertalId(intId);
   };
 
