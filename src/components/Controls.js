@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { createNewBoard, updateBoard } from "../functions";
 
-const GridButtons = ({
+const Controls = ({
   board,
   setBoard,
   gridSize,
@@ -71,4 +71,4 @@ const GridButtons = ({
   );
 };
 
-export default GridButtons;
+export default Controls;

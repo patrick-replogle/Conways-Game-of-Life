@@ -91,45 +91,30 @@ const Presets = ({ gridSize, setBoard }) => {
     return newBoard;
   };
 
-  const pulsarGenerator = (gridSize) => {
+  const spaceShips = (gridSize) => {
     let newBoard = createNewBoard(gridSize);
-    newBoard[10][12]["status"] = 1;
-    newBoard[11][13]["status"] = 1;
-    newBoard[11][12]["status"] = 1;
-    newBoard[11][11]["status"] = 1;
-    newBoard[12][11]["status"] = 1;
-    newBoard[13][11]["status"] = 1;
-    newBoard[13][12]["status"] = 1;
-    newBoard[14][12]["status"] = 1;
-    newBoard[13][13]["status"] = 1;
-    newBoard[12][13]["status"] = 1;
+    newBoard[1][3]["status"] = 1;
+    newBoard[1][4]["status"] = 1;
+    newBoard[2][4]["status"] = 1;
+    newBoard[2][5]["status"] = 1;
+    newBoard[3][5]["status"] = 1;
+    newBoard[3][6]["status"] = 1;
+    newBoard[4][5]["status"] = 1;
+    newBoard[4][4]["status"] = 1;
+    newBoard[3][3]["status"] = 1;
+    newBoard[3][2]["status"] = 1;
+    newBoard[2][2]["status"] = 1;
+    newBoard[2][3]["status"] = 1;
 
-    return newBoard;
-  };
-
-  const queenBeeShuttle = (gridSize) => {
-    let newBoard = createNewBoard(gridSize);
-    newBoard[13][1]["status"] = 1;
-    newBoard[13][2]["status"] = 1;
     newBoard[14][2]["status"] = 1;
-    newBoard[14][1]["status"] = 1;
-    newBoard[13][21]["status"] = 1;
-    newBoard[13][22]["status"] = 1;
-    newBoard[14][22]["status"] = 1;
-    newBoard[14][21]["status"] = 1;
-
-    newBoard[13][6]["status"] = 1;
-    newBoard[14][7]["status"] = 1;
-    newBoard[12][7]["status"] = 1;
-    newBoard[11][8]["status"] = 1;
-    newBoard[15][8]["status"] = 1;
-    newBoard[15][10]["status"] = 1;
-    newBoard[16][10]["status"] = 1;
-    newBoard[14][9]["status"] = 1;
-    newBoard[13][9]["status"] = 1;
-    newBoard[12][9]["status"] = 1;
-    newBoard[11][10]["status"] = 1;
-    newBoard[10][10]["status"] = 1;
+    newBoard[14][5]["status"] = 1;
+    newBoard[15][6]["status"] = 1;
+    newBoard[16][6]["status"] = 1;
+    newBoard[17][6]["status"] = 1;
+    newBoard[17][5]["status"] = 1;
+    newBoard[17][4]["status"] = 1;
+    newBoard[17][3]["status"] = 1;
+    newBoard[16][2]["status"] = 1;
 
     return newBoard;
   };
@@ -154,9 +139,7 @@ const Presets = ({ gridSize, setBoard }) => {
       </div>
 
       <div style={{ display: "flex" }}>
-        <button onClick={() => setBoard(queenBeeShuttle(gridSize))}>
-          Preset 3
-        </button>
+        <button onClick={() => setBoard(spaceShips(gridSize))}>Preset 3</button>
         <p>description</p>
       </div>
 
