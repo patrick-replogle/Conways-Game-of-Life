@@ -46,7 +46,22 @@ export const togglePresets = (input, cb, size) => {
   }
 };
 
-export const pulsar = (gridSize) => {
+export const generateRandomBoard = (size) => {
+  let mainArray = [];
+
+  for (let i = 0; i < size; i++) {
+    let subArray = [];
+    for (let j = 0; j < size; j++) {
+      subArray.push({ status: Math.round(Math.random()), location: [i, j] });
+    }
+    mainArray.push(subArray);
+  }
+  return mainArray;
+};
+
+// presets below
+
+const pulsar = (gridSize) => {
   let newBoard = createNewBoard(gridSize);
   newBoard[5][9]["status"] = 1;
   newBoard[6][9]["status"] = 1;
@@ -108,7 +123,7 @@ export const pulsar = (gridSize) => {
   return newBoard;
 };
 
-export const pulsarGenerator = (gridSize) => {
+const pulsarGenerator = (gridSize) => {
   let newBoard = createNewBoard(gridSize);
   newBoard[10][12]["status"] = 1;
   newBoard[11][13]["status"] = 1;
@@ -124,7 +139,7 @@ export const pulsarGenerator = (gridSize) => {
   return newBoard;
 };
 
-export const pentadecathlon = (gridSize) => {
+const pentadecathlon = (gridSize) => {
   let newBoard = createNewBoard(gridSize);
   newBoard[12][7]["status"] = 1;
   newBoard[12][8]["status"] = 1;
@@ -140,20 +155,7 @@ export const pentadecathlon = (gridSize) => {
   return newBoard;
 };
 
-export const generateRandomBoard = (size) => {
-  let mainArray = [];
-
-  for (let i = 0; i < size; i++) {
-    let subArray = [];
-    for (let j = 0; j < size; j++) {
-      subArray.push({ status: Math.round(Math.random()), location: [i, j] });
-    }
-    mainArray.push(subArray);
-  }
-  return mainArray;
-};
-
-export const queenBeeShuttle = (gridSize) => {
+const queenBeeShuttle = (gridSize) => {
   let newBoard = createNewBoard(gridSize);
   newBoard[13][1]["status"] = 1;
   newBoard[13][2]["status"] = 1;
@@ -179,7 +181,7 @@ export const queenBeeShuttle = (gridSize) => {
   return newBoard;
 };
 
-export const stillLife = (gridSize) => {
+const stillLife = (gridSize) => {
   let newBoard = createNewBoard(gridSize);
   newBoard[2][14]["status"] = 1;
   newBoard[3][14]["status"] = 1;
@@ -273,7 +275,7 @@ export const stillLife = (gridSize) => {
   return newBoard;
 };
 
-export const spaceShips = (gridSize) => {
+const spaceShips = (gridSize) => {
   let newBoard = createNewBoard(gridSize);
   newBoard[1][3]["status"] = 1;
   newBoard[1][4]["status"] = 1;
