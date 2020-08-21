@@ -26,6 +26,7 @@ const Game = () => {
       <Presets
         setBoard={setBoard}
         gridSize={gridSize}
+        setGridSize={setGridSize}
         setIsGenerating={setIsGenerating}
         setGenCount={setGenCount}
         intervalId={intervalId}

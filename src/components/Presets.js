@@ -4,6 +4,7 @@ import { togglePresets } from "../functions/presets";
 
 const Presets = ({
   gridSize,
+  setGridSize,
   setBoard,
   setIsGenerating,
   intervalId,
@@ -26,6 +27,10 @@ const Presets = ({
 
   const handleSpeed = (e) => {
     setSpeed(e.target.value);
+  };
+
+  const handleBoardSize = (e) => {
+    setGridSize(e.target.value);
   };
 
   return (
@@ -76,6 +81,25 @@ const Presets = ({
           value={speed}
           type="number"
         />
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+        }}
+      >
+        <label>Board Size</label>
+        <select
+          onChange={handleBoardSize}
+          value={gridSize}
+          className="inputField"
+        >
+          <option value={25}>Normal</option>
+          <option value={35}>Larger</option>
+          <option value={40}>Largerest</option>
+        </select>
       </div>
     </div>
   );

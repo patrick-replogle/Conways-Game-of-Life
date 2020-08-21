@@ -4,7 +4,7 @@ import Square from "./Square";
 
 const Board = ({ board, isGenerating }) => {
   return (
-    <div style={{ border: "1px solid black" }}>
+    <div className="board">
       {board.map((arr, index) => {
         return (
           <div style={{ display: "flex", width: "100%" }} key={index}>

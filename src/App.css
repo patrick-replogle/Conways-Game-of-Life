@@ -59,3 +59,7 @@ label {
   outline: none;
   border: 1px solid gray;
 }
+
+.board {
+  border: 1px solid black;
+}
