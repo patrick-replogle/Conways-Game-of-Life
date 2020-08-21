@@ -4,7 +4,7 @@ import Cell from "./Cell";
 
 const Board = ({ board, isGenerating, cellColor }) => {
   return (
-    <div className="board">
+    <div style={{ border: "1px solid black" }}>
       {board.map((arr, index) => {
         return (
           <div style={{ display: "flex", width: "100%" }} key={index}>

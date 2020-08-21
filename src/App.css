@@ -73,12 +73,6 @@ body {
   opacity: 0.7;
 }
 
-/* board component */
-
-.board {
-  border: 1px solid black;
-}
-
 /* about component */
 .aboutPageContainer {
   display: flex;

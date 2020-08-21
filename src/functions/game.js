@@ -13,7 +13,25 @@ export const createNewBoard = (size) => {
   return mainArray;
 };
 
-export const calculateNeighborCells = (arr, i, j) => {
+export const updateBoard = (oldBoard) => {
+  let newBoard = [];
+
+  for (let i = 0; i < oldBoard.length; i++) {
+    let subArray = [];
+    for (let j = 0; j < oldBoard.length; j++) {
+      let cellCount = calculateNeighborCells(oldBoard, i, j);
+      let num = calculateLifeExpectancy(oldBoard, i, j, cellCount);
+
+      subArray.push({ status: num, location: [i, j] });
+    }
+    newBoard.push(subArray);
+  }
+  return newBoard;
+};
+
+// helper functions below
+
+const calculateNeighborCells = (arr, i, j) => {
   let N = 0,
     NE = 0,
     E = 0,
@@ -60,7 +78,7 @@ export const calculateNeighborCells = (arr, i, j) => {
   return lifeCount;
 };
 
-export const calculateLifeExpectancy = (arr, i, j, cellCount) => {
+const calculateLifeExpectancy = (arr, i, j, cellCount) => {
   if (arr[i][j]["status"] === 0 && cellCount === 3) {
     return 1;
   } else if (arr[i][j]["status"] === 1 && (cellCount < 2 || cellCount > 3)) {
@@ -73,20 +91,4 @@ export const calculateLifeExpectancy = (arr, i, j, cellCount) => {
   } else {
     return 0;
   }
-};
-
-export const updateBoard = (oldBoard) => {
-  let newBoard = [];
-
-  for (let i = 0; i < oldBoard.length; i++) {
-    let subArray = [];
-    for (let j = 0; j < oldBoard.length; j++) {
-      let cellCount = calculateNeighborCells(oldBoard, i, j);
-      let num = calculateLifeExpectancy(oldBoard, i, j, cellCount);
-
-      subArray.push({ status: num, location: [i, j] });
-    }
-    newBoard.push(subArray);
-  }
-  return newBoard;
 };

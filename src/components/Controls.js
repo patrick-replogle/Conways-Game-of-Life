@@ -20,7 +20,7 @@ const Controls = ({
     togglePresets(input, setBoard, gridSize);
   }, [setInput, input, setBoard, gridSize]);
 
-  const handleSelect = (e) => {
+  const handlePreset = (e) => {
     setInput(e.target.value);
     setIsGenerating(false);
     clearInterval(intervalId);
@@ -46,7 +46,7 @@ const Controls = ({
     <div className="controlsContainer">
       <div className="inputDiv">
         <label>Presets</label>
-        <select onChange={handleSelect} value={input} className="inputField">
+        <select onChange={handlePreset} value={input} className="inputField">
           <option value="none">Choose a Preset</option>
           <option value="acorn">Acorn</option>
           <option value="flower of eden">Flower of Eden</option>

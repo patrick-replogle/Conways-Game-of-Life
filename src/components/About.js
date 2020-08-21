@@ -30,7 +30,7 @@ const About = () => {
           the Game of Life is a cellular automaton played on a two dimensional
           grid of cells. The first generation of cells is constructed by the
           user, however the game evolves naturally based off of a set of rules
-          without user input henceforth, classifying the Game of Life as a
+          without further user input, classifying the Game of Life as a
           zero-player-game.
         </p>
 
