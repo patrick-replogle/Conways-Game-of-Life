@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import Board from "./Board";
+import Buttons from "./Buttons";
 import Controls from "./Controls";
-import Presets from "./Presets";
 
 import { createNewBoard } from "../functions/game";
 
@@ -23,7 +23,7 @@ const Game = () => {
         justifyContent: "center",
       }}
     >
-      <Presets
+      <Controls
         setBoard={setBoard}
         gridSize={gridSize}
         setGridSize={setGridSize}
@@ -34,7 +34,7 @@ const Game = () => {
         setSpeed={setSpeed}
       />
 
-      <Controls
+      <Buttons
         board={board}
         setBoard={setBoard}
         gridSize={gridSize}
@@ -46,8 +46,9 @@ const Game = () => {
         setInvertalId={setInvertalId}
         speed={speed}
       />
+
       <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
-      <h4>Generation: {genCount}</h4>
+      <h4 style={{ marginTop: "1%" }}>Generation: {genCount}</h4>
     </div>
   );
 };
