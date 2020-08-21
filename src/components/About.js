@@ -1,6 +1,6 @@
 import React from "react";
 
-const Rules = (props) => {
+const About = (props) => {
   return (
     <div>
       <p>Rules of Game</p>
@@ -8,4 +8,4 @@ const Rules = (props) => {
   );
 };
 
-export default Rules;
+export default About;

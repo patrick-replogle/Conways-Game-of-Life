@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Board from "./Board";
 import Buttons from "./Buttons";
 import Controls from "./Controls";
+import Header from "./Header";
+import Footer from "./Footer";
 
 import { createNewBoard } from "../functions/game";
 
@@ -23,6 +25,7 @@ const Game = () => {
         justifyContent: "center",
       }}
     >
+      <Header />
       <Controls
         setBoard={setBoard}
         gridSize={gridSize}
@@ -49,6 +52,7 @@ const Game = () => {
 
       <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
       <h4 style={{ marginTop: "1%" }}>Generation: {genCount}</h4>
+      <Footer />
     </div>
   );
 };
