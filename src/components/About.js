@@ -22,17 +22,9 @@ import Spaceship4 from "../assets/spaceship4.gif";
 
 const About = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
+    <div className="aboutPageContainer">
       <Header />
-
-      <div style={{ width: "90%", textAlign: "left" }}>
+      <div className="aboutTextContainer">
         <p>
           Invented by Cambridge mathematician John Conway in the late 1960's,
           the Game of Life is a cellular automaton played on a two dimensional
@@ -45,18 +37,19 @@ const About = () => {
         <p>
           A cell can only exist within two states, or respectively alive or
           dead. Which of the two states a cell will be in the next iteration of
-          the board will be determined by the eight neighboring alive or dead
-          cells that directly touch the cell.
+          the board will be determined by the eight neighboring horizontal,
+          vertical and diagonal cells that directly touch the cell.
+        </p>
+
+        <p>
+          Activate cells on the board at will, select a pattern from one of the
+          presets, or click the random button to autopopulate the board and
+          watch the Game of Life unfold.
         </p>
       </div>
 
-      <div
-        style={{
-          width: "90%",
-          textAlign: "left",
-        }}
-      >
-        <h4>Rules of the Game</h4>
+      <div className="aboutTextContainer">
+        <h3>Rules of the Game:</h3>
         <ul>
           <li>Any live cell with two or three live neighbours survives.</li>
           <li>Any dead cell with three live neighbours becomes a live cell.</li>
@@ -67,69 +60,45 @@ const About = () => {
         </ul>
       </div>
 
-      <div style={{ width: "90%", textAlign: "left" }}>
-        <h4>Still lifes:</h4>
+      <div className="aboutTextContainer">
+        <h3>Example Patterns:</h3>
         <p>
-          A still life is a pattern that does not change from one generation to
-          the next.
+          A <strong>still life</strong> is a pattern that does not change from
+          one generation to the next.
         </p>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            flexWrap: "wrap",
-          }}
-        >
+        <div className="exampleContainer">
           <img src={StillLife1} alt="block" />
           <img src={StillLife2} alt="bee-hive" />
           <img src={StillLife3} alt="loaf" />
           <img src={StillLife4} alt="boat" />
           <img src={StillLife5} alt="tub" />
         </div>
-      </div>
-
-      <div style={{ width: "90%", textAlign: "left" }}>
-        <h4>Oscillators:</h4>
-        <p>
-          An oscillator is a pattern that is a predecessor of itself. That is,
-          it is a pattern that repeats itself after a fixed number of
-          generations
-        </p>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            flexWrap: "wrap",
-          }}
-        >
-          <img src={Oscillator1} alt="blinker" />
-          <img src={Oscillator2} alt="toad" />
-          <img src={Oscillator3} alt="beacon" />
-          <img src={Oscillator4} alt="pulsar" />
-          <img src={Oscillator5} alt="penta" />
+        <div style={{ width: "90%", textAlign: "left" }}>
+          <p>
+            An <strong>oscillator</strong> is a pattern that is a predecessor of
+            itself. That is, it is a pattern that repeats itself after a fixed
+            number of generations
+          </p>
+          <div className="exampleContainer">
+            <img src={Oscillator1} alt="blinker" />
+            <img src={Oscillator2} alt="toad" />
+            <img src={Oscillator3} alt="beacon" />
+            <img src={Oscillator4} alt="pulsar" />
+            <img src={Oscillator5} alt="penta" />
+          </div>
         </div>
-      </div>
-
-      <div style={{ width: "90%", textAlign: "left" }}>
-        <h4>Spaceships:</h4>
-        <p>
-          A spaceship is a finite pattern that returns to its initial state
-          after a number of generations, but in a different location
-        </p>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            flexWrap: "wrap",
-          }}
-        >
-          <img src={Spaceship1} alt="glidar" />
-          <img src={Spaceship2} alt="light" />
-          <img src={Spaceship3} alt="middle" />
-          <img src={Spaceship4} alt="heavy" />
+        <div style={{ width: "90%", textAlign: "left" }}>
+          <p>
+            A <strong>spaceship</strong> is a finite pattern that returns to its
+            initial state after a number of generations, but in a different
+            location
+          </p>
+          <div className="exampleContainer">
+            <img src={Spaceship1} alt="glidar" />
+            <img src={Spaceship2} alt="light" />
+            <img src={Spaceship3} alt="middle" />
+            <img src={Spaceship4} alt="heavy" />
+          </div>
         </div>
       </div>
 

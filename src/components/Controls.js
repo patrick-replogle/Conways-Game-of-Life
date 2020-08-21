@@ -11,6 +11,8 @@ const Controls = ({
   setGenCount,
   speed,
   setSpeed,
+  cellColor,
+  setCellColor,
 }) => {
   const [input, setInput] = useState("");
 
@@ -36,23 +38,13 @@ const Controls = ({
     setGenCount(0);
   };
 
+  const handleCellColor = (e) => {
+    setCellColor(e.target.value);
+  };
+
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        width: "100%",
-        justifyContent: "space-evenly",
-        marginBottom: "10px",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-        }}
-      >
+    <div className="controlsContainer">
+      <div className="inputDiv">
         <label>Presets</label>
         <select onChange={handleSelect} value={input} className="inputField">
           <option value="none">Choose a Preset</option>
@@ -70,29 +62,17 @@ const Controls = ({
         </select>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-        }}
-      >
+      <div className="inputDiv">
         <label>Speed</label>
         <input
-          className="inputField"
+          className="speed"
           onChange={handleSpeed}
           value={speed}
           type="number"
         />
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-        }}
-      >
+      <div className="inputDiv">
         <label>Board Size</label>
         <select
           onChange={handleBoardSize}
@@ -102,6 +82,22 @@ const Controls = ({
           <option value={25}>Normal</option>
           <option value={35}>Larger</option>
           <option value={40}>Largerest</option>
+        </select>
+      </div>
+
+      <div className="inputDiv">
+        <label>Cell Color</label>
+        <select
+          onChange={handleCellColor}
+          value={cellColor}
+          className="inputField"
+        >
+          <option value="random">Random</option>
+          <option value="black">Black</option>
+          <option value="#03DAC6">Teal</option>
+          <option value="#FF8C00">Orange</option>
+          <option value="#2069E0">Blue</option>
+          <option value="#BB86FC">Purple</option>
         </select>
       </div>
     </div>

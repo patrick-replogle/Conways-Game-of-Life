@@ -3,12 +3,14 @@
 }
 
 body {
-  background: #444444;
+  background: #212121;
   color: white;
 }
 
+/* header component */
+
 .header {
-  background: #121212;
+  background: #303030;
   color: white;
   align-items: center;
   display: flex;
@@ -32,26 +34,29 @@ body {
   margin-right: 2%;
 }
 
+/* footer component */
+
 .footer {
-  background: #121212;
+  background: #303030;
   color: white;
   align-items: center;
   display: flex;
   height: 70px;
   justify-content: center;
   width: 100vw;
+  margin-top: 20px;
   -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
 }
 
-.dead {
-  background: #cf6679;
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 
-.alive {
-  background: #bb86fc;
-}
+/* button component */
 
 .gameButton {
   color: white;
@@ -66,6 +71,61 @@ body {
 
 .gameButton:hover {
   opacity: 0.7;
+}
+
+/* board component */
+
+.board {
+  border: 1px solid black;
+}
+
+/* about component */
+.aboutPageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutTextContainer {
+  width: 90%;
+  text-align: left;
+  background: #303030;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.exampleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* controls component */
+.controlsContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 850px) {
+  .controlsContainer {
+    flex-direction: column;
+  }
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 label {
@@ -84,6 +144,27 @@ label {
   border: 1px solid gray;
 }
 
-.board {
-  border: 1px solid black;
+@media (max-width: 850px) {
+  .inputField {
+    width: 400px;
+    margin: 10px 0;
+  }
+}
+
+.speed {
+  border-radius: 4px;
+  width: 200px;
+  padding: 10px 5px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid gray;
+}
+
+@media (max-width: 850px) {
+  .speed {
+    width: 390px;
+    margin: 10px 0;
+  }
 }
