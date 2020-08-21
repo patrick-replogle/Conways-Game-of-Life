@@ -1,6 +1,6 @@
 # Conway's Game of Life
 
-Deployed front end url: ""
+Deployed front end url: https://conways-game-of-life-2020.herokuapp.com/
 
 ## Project Overview
 
@@ -11,7 +11,7 @@ without further user input, classifying the Game of Life as a zero-player-game.
 A cell can only exist within two states, or respectively alive or dead. Which of the two states a cell will be in the next iteration of the board will be determined by the eight neighboring horizontal, vertical and diagonal cells that directly touch the cell.
 
 Activate cells on the board at will, select a pattern from one of the presets, or click the random button to autopopulate the board and
-watch the Game of Life unfold.
+watch the Game of Life unfold. Other user controls include the ability to adjust the generation cycle speed, change the cell color, and adjust the board size. The user can either watch the cycles play through in real time or click to view each cycle one at a time.
 
 This implementation of the Game of Life was created using React hooks.
 
