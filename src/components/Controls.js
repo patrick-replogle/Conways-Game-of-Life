@@ -1,6 +1,7 @@
 import React from "react";
 
 import { createNewBoard, updateBoard } from "../functions/game";
+import { generateRandomBoard } from "../functions/presets";
 
 const Controls = ({
   board,
@@ -12,6 +13,7 @@ const Controls = ({
   setGenCount,
   intervalId,
   setInvertalId,
+  speed,
 }) => {
   const startGame = () => {
     let intId = setInterval(() => {
@@ -19,7 +21,7 @@ const Controls = ({
       board = newBoard;
       setBoard(newBoard);
       setGenCount(genCount++);
-    }, 100);
+    }, speed);
     setInvertalId(intId);
   };
 
@@ -35,8 +37,15 @@ const Controls = ({
     clearInterval(intervalId);
   };
 
+  const nextGeneration = (currBoard) => {
+    let newBoard = updateBoard(currBoard);
+    board = newBoard;
+    setBoard(newBoard);
+    setGenCount((genCount += 1));
+  };
+
   return (
-    <div style={{ marginTop: "10px" }}>
+    <div style={{ marginBottom: "10px" }}>
       <button
         onClick={() => {
           if (!isGenerating) {
@@ -66,6 +75,28 @@ const Controls = ({
         style={{ background: "red" }}
       >
         Clear
+      </button>
+
+      <button
+        onClick={() => {
+          setGenCount(0);
+          clearInterval(intervalId);
+          setIsGenerating(false);
+          setBoard(generateRandomBoard(gridSize));
+        }}
+        className="gameButton"
+        style={{ background: "purple" }}
+      >
+        Random
+      </button>
+      <button
+        onClick={() => {
+          nextGeneration(board);
+        }}
+        className="gameButton"
+        style={{ background: "black" }}
+      >
+        Next Generation
       </button>
     </div>
   );

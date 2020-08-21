@@ -2,47 +2,32 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background: #444444;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  background: #121212;
+  color: white;
+  align-items: center;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  padding: 0 3%;
+  width: 100%;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
 }
 
 .dead {
-  background: white;
+  background: #cf6679;
 }
 
 .alive {
-  background: black;
+  background: #bb86fc;
 }
 
 .gameButton {
@@ -50,10 +35,27 @@
   padding: 10px 20px;
   border-radius: 6px;
   border: none;
-  margin: 5px;
+  margin: 10px;
   outline: none;
+  font-size: 16px;
 }
 
 .gameButton:hover {
   opacity: 0.7;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.inputField {
+  border-radius: 4px;
+  width: 200px;
+  padding: 10px 5px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid gray;
 }

@@ -12,13 +12,27 @@ const Game = () => {
   const [gridSize, setGridSize] = useState(25);
   const [board, setBoard] = useState(createNewBoard(gridSize));
   const [intervalId, setInvertalId] = useState(null);
+  const [speed, setSpeed] = useState(100);
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
-      <h3>Generations: {genCount}</h3>
-      <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
+      <Presets
+        setBoard={setBoard}
+        gridSize={gridSize}
+        setIsGenerating={setIsGenerating}
+        setGenCount={setGenCount}
+        intervalId={intervalId}
+        speed={speed}
+        setSpeed={setSpeed}
+      />
+
       <Controls
         board={board}
         setBoard={setBoard}
@@ -29,14 +43,10 @@ const Game = () => {
         setGenCount={setGenCount}
         intervalId={intervalId}
         setInvertalId={setInvertalId}
+        speed={speed}
       />
-      <Presets
-        setBoard={setBoard}
-        gridSize={gridSize}
-        setIsGenerating={setIsGenerating}
-        setGenCount={setGenCount}
-        intervalId={intervalId}
-      />
+      <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
+      <h4>Generation: {genCount}</h4>
     </div>
   );
 };
