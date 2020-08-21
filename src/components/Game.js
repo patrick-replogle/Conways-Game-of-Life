@@ -15,6 +15,7 @@ const Game = () => {
   const [board, setBoard] = useState(createNewBoard(gridSize));
   const [intervalId, setInvertalId] = useState(null);
   const [speed, setSpeed] = useState(100);
+  const [cellColor, setCellColor] = useState("random");
 
   return (
     <div
@@ -35,6 +36,8 @@ const Game = () => {
         intervalId={intervalId}
         speed={speed}
         setSpeed={setSpeed}
+        cellColor={cellColor}
+        setCellColor={setCellColor}
       />
 
       <Buttons
@@ -50,7 +53,7 @@ const Game = () => {
         speed={speed}
       />
 
-      <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
+      <Board board={board} isGenerating={isGenerating} cellColor={cellColor} />
       <h4 style={{ marginTop: "1%" }}>Generation: {genCount}</h4>
       <Footer />
     </div>

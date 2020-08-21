@@ -2,7 +2,7 @@ import React from "react";
 
 import Cell from "./Cell";
 
-const Board = ({ board, isGenerating }) => {
+const Board = ({ board, isGenerating, cellColor }) => {
   return (
     <div className="board">
       {board.map((arr, index) => {
@@ -15,6 +15,7 @@ const Board = ({ board, isGenerating }) => {
                   square={square}
                   key={index}
                   isGenerating={isGenerating}
+                  cellColor={cellColor}
                 />
               );
             })}
