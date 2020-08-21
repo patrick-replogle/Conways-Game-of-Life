@@ -31,7 +31,6 @@ const About = () => {
       }}
     >
       <Header />
-
       <div style={{ width: "90%", textAlign: "left" }}>
         <p>
           Invented by Cambridge mathematician John Conway in the late 1960's,
@@ -45,8 +44,14 @@ const About = () => {
         <p>
           A cell can only exist within two states, or respectively alive or
           dead. Which of the two states a cell will be in the next iteration of
-          the board will be determined by the eight neighboring alive or dead
-          cells that directly touch the cell.
+          the board will be determined by the eight neighboring horizontal,
+          vertical and diagonal cells that directly touch the cell.
+        </p>
+
+        <p>
+          Activate cells on the board at will, select a pattern from one of the
+          presets, or click the random button to autopopulate the board and
+          watch the Game of Life unfold.
         </p>
       </div>
 
@@ -56,7 +61,7 @@ const About = () => {
           textAlign: "left",
         }}
       >
-        <h4>Rules of the Game</h4>
+        <h3>Rules of the Game:</h3>
         <ul>
           <li>Any live cell with two or three live neighbours survives.</li>
           <li>Any dead cell with three live neighbours becomes a live cell.</li>
@@ -67,11 +72,16 @@ const About = () => {
         </ul>
       </div>
 
-      <div style={{ width: "90%", textAlign: "left" }}>
-        <h4>Still lifes:</h4>
+      <div
+        style={{
+          width: "90%",
+          textAlign: "left",
+        }}
+      >
+        <h3>Example Patterns:</h3>
         <p>
-          A still life is a pattern that does not change from one generation to
-          the next.
+          A <strong>still life</strong> is a pattern that does not change from
+          one generation to the next.
         </p>
         <div
           style={{
@@ -79,6 +89,9 @@ const About = () => {
             alignItems: "center",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
+            background: "white",
+            borderRadius: "10px",
+            padding: "20px 0",
           }}
         >
           <img src={StillLife1} alt="block" />
@@ -90,11 +103,10 @@ const About = () => {
       </div>
 
       <div style={{ width: "90%", textAlign: "left" }}>
-        <h4>Oscillators:</h4>
         <p>
-          An oscillator is a pattern that is a predecessor of itself. That is,
-          it is a pattern that repeats itself after a fixed number of
-          generations
+          An <strong>oscillator</strong> is a pattern that is a predecessor of
+          itself. That is, it is a pattern that repeats itself after a fixed
+          number of generations
         </p>
         <div
           style={{
@@ -102,6 +114,9 @@ const About = () => {
             alignItems: "center",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
+            background: "white",
+            borderRadius: "10px",
+            padding: "20px 0",
           }}
         >
           <img src={Oscillator1} alt="blinker" />
@@ -113,10 +128,10 @@ const About = () => {
       </div>
 
       <div style={{ width: "90%", textAlign: "left" }}>
-        <h4>Spaceships:</h4>
         <p>
-          A spaceship is a finite pattern that returns to its initial state
-          after a number of generations, but in a different location
+          A <strong>spaceship</strong> is a finite pattern that returns to its
+          initial state after a number of generations, but in a different
+          location
         </p>
         <div
           style={{
@@ -124,6 +139,10 @@ const About = () => {
             alignItems: "center",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
+            background: "white",
+            borderRadius: "10px",
+            padding: "20px 0",
+            marginBottom: "50px",
           }}
         >
           <img src={Spaceship1} alt="glidar" />

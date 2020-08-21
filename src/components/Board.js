@@ -1,6 +1,6 @@
 import React from "react";
 
-import Square from "./Square";
+import Cell from "./Cell";
 
 const Board = ({ board, isGenerating }) => {
   return (
@@ -10,7 +10,7 @@ const Board = ({ board, isGenerating }) => {
           <div style={{ display: "flex", width: "100%" }} key={index}>
             {arr.map((square, index) => {
               return (
-                <Square
+                <Cell
                   board={board}
                   square={square}
                   key={index}
