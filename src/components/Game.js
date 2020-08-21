@@ -1,24 +1,43 @@
 import React, { useState } from "react";
 
 import Board from "./Board";
+import Buttons from "./Buttons";
 import Controls from "./Controls";
-import Presets from "./Presets";
+import Header from "./Header";
+import Footer from "./Footer";
 
-import { createNewBoard } from "../functions";
+import { createNewBoard } from "../functions/game";
 
 const Game = () => {
   const [genCount, setGenCount] = useState(0);
   const [isGenerating, setIsGenerating] = useState(false);
   const [gridSize, setGridSize] = useState(25);
   const [board, setBoard] = useState(createNewBoard(gridSize));
+  const [intervalId, setInvertalId] = useState(null);
+  const [speed, setSpeed] = useState(100);
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
-      <h3>Generations: {genCount}</h3>
-      <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
+      <Header />
       <Controls
+        setBoard={setBoard}
+        gridSize={gridSize}
+        setGridSize={setGridSize}
+        setIsGenerating={setIsGenerating}
+        setGenCount={setGenCount}
+        intervalId={intervalId}
+        speed={speed}
+        setSpeed={setSpeed}
+      />
+
+      <Buttons
         board={board}
         setBoard={setBoard}
         gridSize={gridSize}
@@ -26,8 +45,14 @@ const Game = () => {
         setIsGenerating={setIsGenerating}
         genCount={genCount}
         setGenCount={setGenCount}
+        intervalId={intervalId}
+        setInvertalId={setInvertalId}
+        speed={speed}
       />
-      <Presets setBoard={setBoard} gridSize={gridSize} />
+
+      <Board board={board} setBoard={setBoard} isGenerating={isGenerating} />
+      <h4 style={{ marginTop: "1%" }}>Generation: {genCount}</h4>
+      <Footer />
     </div>
   );
 };

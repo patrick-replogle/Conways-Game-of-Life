@@ -1,4 +1,50 @@
-import { createNewBoard } from "./index";
+import { createNewBoard } from "./game";
+
+export const togglePresets = (input, cb, size) => {
+  switch (input) {
+    case "none":
+      cb(createNewBoard(size));
+      break;
+    case "random":
+      cb(generateRandomBoard(size));
+      break;
+    case "acorn":
+      cb(acorn(size));
+      break;
+    case "still life":
+      cb(stillLife(size));
+      break;
+    case "pulsar":
+      cb(pulsar(size));
+      break;
+    case "pulsar generator":
+      cb(pulsarGenerator(size));
+      break;
+    case "queen bee shuttle":
+      cb(queenBeeShuttle(size));
+      break;
+    case "spaceship":
+      cb(spaceShips(size));
+      break;
+    case "pentadecatchlon":
+      cb(pentadecathlon(size));
+      break;
+    case "flower of eden":
+      cb(flowerOfEden(size));
+      break;
+    case "r-pentomino":
+      cb(rPentomino(size));
+      break;
+    case "circle of fire":
+      cb(circleOfFire(size));
+      break;
+    case "glidar":
+      cb(glidar(size));
+      break;
+    default:
+      cb(createNewBoard(size));
+  }
+};
 
 export const pulsar = (gridSize) => {
   let newBoard = createNewBoard(gridSize);
@@ -250,6 +296,170 @@ export const spaceShips = (gridSize) => {
   newBoard[17][4]["status"] = 1;
   newBoard[17][3]["status"] = 1;
   newBoard[16][2]["status"] = 1;
+
+  return newBoard;
+};
+
+const acorn = (gridSize) => {
+  let newBoard = createNewBoard(gridSize);
+  newBoard[8][13]["status"] = 1;
+  newBoard[10][13]["status"] = 1;
+  newBoard[10][12]["status"] = 1;
+  newBoard[9][15]["status"] = 1;
+  newBoard[10][16]["status"] = 1;
+  newBoard[10][17]["status"] = 1;
+  newBoard[10][18]["status"] = 1;
+
+  return newBoard;
+};
+
+const flowerOfEden = (gridSize) => {
+  let newBoard = createNewBoard(gridSize);
+  newBoard[7][13]["status"] = 1;
+  newBoard[7][14]["status"] = 1;
+  newBoard[8][13]["status"] = 1;
+  newBoard[9][13]["status"] = 1;
+  newBoard[9][14]["status"] = 1;
+  newBoard[9][15]["status"] = 1;
+  newBoard[9][16]["status"] = 1;
+  newBoard[9][17]["status"] = 1;
+  newBoard[8][17]["status"] = 1;
+  newBoard[8][16]["status"] = 1;
+  newBoard[8][15]["status"] = 1;
+  newBoard[10][15]["status"] = 1;
+  newBoard[10][17]["status"] = 1;
+  newBoard[11][16]["status"] = 1;
+  newBoard[7][10]["status"] = 1;
+  newBoard[7][9]["status"] = 1;
+  newBoard[7][8]["status"] = 1;
+  newBoard[8][8]["status"] = 1;
+  newBoard[8][9]["status"] = 1;
+  newBoard[8][11]["status"] = 1;
+  newBoard[9][10]["status"] = 1;
+  newBoard[9][9]["status"] = 1;
+  newBoard[9][8]["status"] = 1;
+  newBoard[10][7]["status"] = 1;
+  newBoard[10][9]["status"] = 1;
+  newBoard[11][7]["status"] = 1;
+  newBoard[11][8]["status"] = 1;
+  newBoard[11][9]["status"] = 1;
+  newBoard[11][10]["status"] = 1;
+  newBoard[10][11]["status"] = 1;
+  newBoard[10][13]["status"] = 1;
+  newBoard[11][14]["status"] = 1;
+  newBoard[11][12]["status"] = 1;
+  newBoard[12][13]["status"] = 1;
+  newBoard[12][12]["status"] = 1;
+  newBoard[12][11]["status"] = 1;
+  newBoard[13][12]["status"] = 1;
+  newBoard[13][14]["status"] = 1;
+  newBoard[13][15]["status"] = 1;
+  newBoard[13][16]["status"] = 1;
+  newBoard[13][17]["status"] = 1;
+  newBoard[14][17]["status"] = 1;
+  newBoard[14][15]["status"] = 1;
+  newBoard[14][13]["status"] = 1;
+  newBoard[15][14]["status"] = 1;
+  newBoard[15][15]["status"] = 1;
+  newBoard[15][16]["status"] = 1;
+  newBoard[16][16]["status"] = 1;
+  newBoard[16][15]["status"] = 1;
+  newBoard[16][13]["status"] = 1;
+  newBoard[17][14]["status"] = 1;
+  newBoard[17][15]["status"] = 1;
+  newBoard[17][16]["status"] = 1;
+  newBoard[13][10]["status"] = 1;
+  newBoard[13][8]["status"] = 1;
+  newBoard[14][11]["status"] = 1;
+  newBoard[14][9]["status"] = 1;
+  newBoard[14][7]["status"] = 1;
+  newBoard[15][7]["status"] = 1;
+  newBoard[15][8]["status"] = 1;
+  newBoard[15][9]["status"] = 1;
+  newBoard[15][10]["status"] = 1;
+  newBoard[15][11]["status"] = 1;
+  newBoard[16][11]["status"] = 1;
+  newBoard[17][11]["status"] = 1;
+  newBoard[17][10]["status"] = 1;
+  newBoard[16][9]["status"] = 1;
+  newBoard[16][8]["status"] = 1;
+  newBoard[16][7]["status"] = 1;
+
+  return newBoard;
+};
+
+const rPentomino = (gridSize) => {
+  let newBoard = createNewBoard(gridSize);
+  newBoard[8][15]["status"] = 1;
+  newBoard[8][14]["status"] = 1;
+  newBoard[9][14]["status"] = 1;
+  newBoard[9][13]["status"] = 1;
+  newBoard[10][14]["status"] = 1;
+  newBoard[16][20]["status"] = 1;
+  newBoard[16][19]["status"] = 1;
+  newBoard[17][19]["status"] = 1;
+  newBoard[18][19]["status"] = 1;
+  newBoard[17][18]["status"] = 1;
+
+  return newBoard;
+};
+
+const circleOfFire = (gridSize) => {
+  let newBoard = createNewBoard(gridSize);
+  newBoard[7][13]["status"] = 1;
+  newBoard[7][11]["status"] = 1;
+  newBoard[8][9]["status"] = 1;
+  newBoard[9][10]["status"] = 1;
+  newBoard[10][10]["status"] = 1;
+  newBoard[10][9]["status"] = 1;
+  newBoard[10][8]["status"] = 1;
+  newBoard[8][15]["status"] = 1;
+  newBoard[9][14]["status"] = 1;
+  newBoard[10][14]["status"] = 1;
+  newBoard[10][15]["status"] = 1;
+  newBoard[10][16]["status"] = 1;
+  newBoard[8][12]["status"] = 1;
+  newBoard[9][12]["status"] = 1;
+  newBoard[10][12]["status"] = 1;
+  newBoard[11][12]["status"] = 1;
+
+  newBoard[12][17]["status"] = 1;
+  newBoard[12][16]["status"] = 1;
+  newBoard[12][15]["status"] = 1;
+  newBoard[12][14]["status"] = 1;
+  newBoard[12][13]["status"] = 1;
+  newBoard[12][11]["status"] = 1;
+  newBoard[12][10]["status"] = 1;
+  newBoard[12][9]["status"] = 1;
+  newBoard[12][8]["status"] = 1;
+  newBoard[12][7]["status"] = 1;
+  newBoard[14][8]["status"] = 1;
+  newBoard[14][9]["status"] = 1;
+  newBoard[14][10]["status"] = 1;
+  newBoard[15][10]["status"] = 1;
+  newBoard[16][9]["status"] = 1;
+  newBoard[17][11]["status"] = 1;
+  newBoard[17][13]["status"] = 1;
+  newBoard[16][12]["status"] = 1;
+  newBoard[15][12]["status"] = 1;
+  newBoard[14][12]["status"] = 1;
+  newBoard[13][12]["status"] = 1;
+  newBoard[14][14]["status"] = 1;
+  newBoard[14][15]["status"] = 1;
+  newBoard[14][16]["status"] = 1;
+  newBoard[16][15]["status"] = 1;
+  newBoard[15][14]["status"] = 1;
+
+  return newBoard;
+};
+
+const glidar = (gridSize) => {
+  let newBoard = createNewBoard(gridSize);
+  newBoard[7][8]["status"] = 1;
+  newBoard[8][9]["status"] = 1;
+  newBoard[9][9]["status"] = 1;
+  newBoard[9][8]["status"] = 1;
+  newBoard[9][7]["status"] = 1;
 
   return newBoard;
 };

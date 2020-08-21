@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const Square = ({ square, board, isGenerating }) => {
+  // eslint-disable-next-line
   const [box, setBox] = useState(square.status);
 
   const toggleStatus = (square) => {
