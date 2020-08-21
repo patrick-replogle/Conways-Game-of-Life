@@ -1,18 +1,18 @@
 # Conway's Game of Life
 
-Deployed front end app url: ""
+Deployed front end url: ""
 
 ## Project Overview
 Invented by Cambridge mathematician John Conway in the late 1960's, the Game of Life is a cellular automaton played on a two dimensional
 grid of cells. The first generation of cells is constructed by the user, however the game evolves naturally based off of a set of rules
 without further user input, classifying the Game of Life as a zero-player-game.
 
-A cell can only exist within two states, or respectively alive or dead. Which of the two states a cell will be in the next iteration othe board will be determined by the eight neighboring horizontal, vertical and diagonal cells that directly touch the cell.
+A cell can only exist within two states, or respectively alive or dead. Which of the two states a cell will be in the next iteration of the board will be determined by the eight neighboring horizontal, vertical and diagonal cells that directly touch the cell.
 
 Activate cells on the board at will, select a pattern from one of the presets, or click the random button to autopopulate the board and
 watch the Game of Life unfold.
 
-This implementation of the Game was implemented using React hooks.
+This implementation of the Game of Life was created using React hooks.
 
 ## Contributor
 
