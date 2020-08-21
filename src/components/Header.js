@@ -1,10 +1,17 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <div className="header">
       <h1>Conway's Game of Life</h1>
-      <p style={{ marginRight: "5%" }}>About</p>
+      {location.pathname !== "/about" ? (
+        <Link to="/about">About</Link>
+      ) : (
+        <Link to="/">Home</Link>
+      )}
     </div>
   );
 };

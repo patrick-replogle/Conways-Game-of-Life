@@ -25,6 +25,13 @@ body {
   margin-left: 2%;
 }
 
+.header a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  margin-right: 2%;
+}
+
 .footer {
   background: #121212;
   color: white;
