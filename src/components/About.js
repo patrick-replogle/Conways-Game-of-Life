@@ -44,7 +44,15 @@ const About = () => {
         <p>
           Activate cells on the board at will, select a pattern from one of the
           presets, or click the random button to autopopulate the board and
-          watch the Game of Life unfold.
+          watch the Game of Life unfold. Other user controls include the ability
+          to adjust the generation cycle speed, change the cell color, and
+          adjust the board size. The user can either watch the cycles play
+          through in real time or click to view each cycle one at a time.
+        </p>
+
+        <p>
+          This implementation of the Game of Life was created by Patrick
+          Replogle using React.
         </p>
       </div>
 
