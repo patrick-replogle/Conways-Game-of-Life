@@ -14,8 +14,6 @@ const App = () => {
       <Route path="/about">
         <About />
       </Route>
-      {/* <Game /> */}
-      {/* <About /> */}
     </div>
   );
 };
