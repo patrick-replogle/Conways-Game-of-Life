@@ -14,7 +14,7 @@ const Game = () => {
   const [gridSize, setGridSize] = useState(25);
   const [board, setBoard] = useState(createNewBoard(gridSize));
   const [intervalId, setInvertalId] = useState(null);
-  const [speed, setSpeed] = useState(100);
+  const [speed, setSpeed] = useState(200);
   const [cellColor, setCellColor] = useState("random");
 
   return (
