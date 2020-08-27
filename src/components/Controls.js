@@ -48,10 +48,13 @@ const Controls = ({
         <label>Presets</label>
         <select onChange={handlePreset} value={input} className="inputField">
           <option value="none">Choose a Preset</option>
+          <option value="square">Square</option>
           <option value="acorn">Acorn</option>
           <option value="flower of eden">Flower of Eden</option>
+          <option value="cross">Cross</option>
           <option value="pulsar">Pulsar</option>
           <option value="spaceship">Spaceship</option>
+          <option value="horizontal line">Horizontal Line</option>
           <option value="circle of fire">Circle of Fire</option>
           <option value="glidar">Glidar</option>
           <option value="still life">Still Life</option>
