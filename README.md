@@ -1,6 +1,6 @@
 # Conway's Game of Life
 
-Deployed front end url: https://conways-game-of-life-2020.herokuapp.com/
+Deployed front end url: https://conways-game-of-life-pearl.vercel.app/
 
 ## Project Overview
 
