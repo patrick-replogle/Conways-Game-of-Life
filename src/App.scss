@@ -5,10 +5,12 @@
 
 html,
 body {
+    font-family: sofia-pro, sans-serif;
+    font-style: normal;
+    font-weight: 400;
     height: 100vh;
     margin: 0;
     padding: 0;
-    position: relative;
 }
 
 .App {
@@ -60,10 +62,7 @@ strong {
 
 .header h1 {
     margin-left: 2%;
-}
-
-@media (max-width: 500px) {
-    .header h1 {
+    @media (max-width: 500px) {
         font-size: 2.5rem;
     }
 }
@@ -151,10 +150,8 @@ strong {
     width: 100%;
     justify-content: space-evenly;
     margin-bottom: 10px;
-}
 
-@media (max-width: 850px) {
-    .controlsContainer {
+    @media (max-width: 850px) {
         flex-direction: column;
     }
 }
@@ -179,17 +176,13 @@ label {
     font-size: 16px;
     outline: none;
     border: 1px solid gray;
-}
 
-@media (max-width: 850px) {
-    .inputField {
+    @media (max-width: 850px) {
         width: 400px;
         margin: 10px 0;
     }
-}
 
-@media (max-width: 500px) {
-    .inputField {
+    @media (max-width: 500px) {
         width: 340px;
     }
 }
@@ -203,17 +196,13 @@ label {
     font-size: 16px;
     outline: none;
     border: 1px solid gray;
-}
 
-@media (max-width: 850px) {
-    .speed {
+    @media (max-width: 850px) {
         width: 400px;
         margin: 10px 0;
     }
-}
 
-@media (max-width: 500px) {
-    .speed {
+    @media (max-width: 500px) {
         width: 340px;
     }
 }
@@ -223,11 +212,9 @@ label {
     width: 18px;
     height: 18px;
     border: 1px solid #424242;
-}
 
-@media (max-width: 500px) {
-    .cell {
-        width: 13px;
-        height: 13px;
+    @media (max-width: 500px) {
+        width: 14px;
+        height: 14px;
     }
 }

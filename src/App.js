@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 
 import Game from './components/Game';
 import About from './components/About';
-import './App.css';
+import './App.scss';
 
 const App = () => {
     return (
