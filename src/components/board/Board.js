@@ -2,12 +2,14 @@ import React from 'react';
 
 import Cell from '../cell/Cell';
 
+import './board.styles.scss';
+
 const Board = ({ board, isGenerating, cellColor }) => {
     return (
-        <div style={{ border: '1px solid black' }}>
+        <div className="mainContainer">
             {board.map((arr, index) => {
                 return (
-                    <div style={{ display: 'flex', width: '100%' }} key={index}>
+                    <div className="cellContainer" key={index}>
                         {arr.map((square, index) => {
                             return (
                                 <Cell

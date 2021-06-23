@@ -47,15 +47,7 @@ const Buttons = ({
     };
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                alignItems: 'center',
-                marginBottom: '10px',
-                flexWrap: 'wrap',
-                justifyContent: 'center',
-            }}
-        >
+        <div className="btnContainer">
             <button
                 onClick={() => {
                     if (!isGenerating) {

@@ -34,7 +34,6 @@ const Game = () => {
                 cellColor={cellColor}
                 setCellColor={setCellColor}
             />
-
             <Buttons
                 board={board}
                 setBoard={setBoard}
@@ -47,7 +46,6 @@ const Game = () => {
                 setInvertalId={setInvertalId}
                 speed={speed}
             />
-
             <Board
                 board={board}
                 isGenerating={isGenerating}
