@@ -36,8 +36,9 @@ const Controls = ({
     const handleBoardSize = (e) => {
         setIsGenerating(false);
         clearInterval(intervalId);
-        setGridSize(e.target.value);
+        setGridSize(Number(e.target.value));
         setGenCount(0);
+        setInput('')
     };
 
     const handleCellColor = (e) => {
@@ -48,6 +49,7 @@ const Controls = ({
         <div className="controlsContainer">
             <div className="inputDiv">
                 <label>Presets</label>
+                {gridSize === 25 ? (
                 <select
                     onChange={handlePreset}
                     value={input}
@@ -69,6 +71,18 @@ const Controls = ({
                     <option value="pentadecatchlon">Pentadecathlon</option>
                     <option value="queen bee shuttle">Queen Bee Shuttle</option>
                 </select>
+                ) : (
+                    <select
+                    onChange={handlePreset}
+                    value={input}
+                    className="inputField"
+                >
+                    <option value="none">Choose a Preset</option>
+                    <option value="square">Square</option>
+                    <option value="cross">Cross</option>
+                    <option value="horizontal line">Horizontal Line</option>
+                </select> 
+                )}
             </div>
 
             <div className="inputDiv">
@@ -77,7 +91,6 @@ const Controls = ({
                     className="speed"
                     onChange={handleSpeed}
                     value={speed}
-                    type="number"
                 />
             </div>
 
