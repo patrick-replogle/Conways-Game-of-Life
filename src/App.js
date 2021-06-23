@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import Game from './components/Game';
-import About from './components/About';
+import Game from './components/game/Game';
+import About from './components/about/About';
+
 import './App.scss';
 
 const App = () => {

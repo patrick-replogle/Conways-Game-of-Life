@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Cell from './Cell';
+import Cell from '../cell/Cell';
 
 const Board = ({ board, isGenerating, cellColor }) => {
     return (

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
-import Board from './Board';
-import Buttons from './Buttons';
-import Controls from './Controls';
-import Header from './Header';
-import Footer from './Footer';
+import Board from '../board/Board';
+import Buttons from '../buttons/Buttons';
+import Controls from '../controls/Controls';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 
-import { createNewBoard } from '../functions/game';
+import { createNewBoard } from '../../functions/game';
+
+import './game.styles.scss';
 
 const Game = () => {
     const [genCount, setGenCount] = useState(0);
@@ -18,14 +20,7 @@ const Game = () => {
     const [cellColor, setCellColor] = useState('random');
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-            }}
-        >
+        <div className="container">
             <Header />
             <Controls
                 setBoard={setBoard}

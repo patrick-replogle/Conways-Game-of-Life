@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import { togglePresets } from '../functions/presets';
+import { togglePresets } from '../../functions/presets';
+
+import './controls.styles.scss';
 
 const Controls = ({
     gridSize,
@@ -53,12 +55,12 @@ const Controls = ({
                 >
                     <option value="none">Choose a Preset</option>
                     <option value="square">Square</option>
+                    <option value="cross">Cross</option>
+                    <option value="horizontal line">Horizontal Line</option>
                     <option value="acorn">Acorn</option>
                     <option value="flower of eden">Flower of Eden</option>
-                    <option value="cross">Cross</option>
                     <option value="pulsar">Pulsar</option>
                     <option value="spaceship">Spaceship</option>
-                    <option value="horizontal line">Horizontal Line</option>
                     <option value="circle of fire">Circle of Fire</option>
                     <option value="glidar">Glidar</option>
                     <option value="still life">Still Life</option>
@@ -88,7 +90,7 @@ const Controls = ({
                 >
                     <option value={25}>Normal</option>
                     <option value={35}>Larger</option>
-                    <option value={40}>Largerest</option>
+                    <option value={40}>Largest</option>
                 </select>
             </div>
 

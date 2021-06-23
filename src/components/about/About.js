@@ -1,24 +1,26 @@
 import React from 'react';
 
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 
-import StillLife1 from '../assets/still_life1.png';
-import StillLife2 from '../assets/still_life2.png';
-import StillLife3 from '../assets/still_life3.png';
-import StillLife4 from '../assets/still_life4.png';
-import StillLife5 from '../assets/still_life5.png';
+import StillLife1 from '../../assets/still_life1.png';
+import StillLife2 from '../../assets/still_life2.png';
+import StillLife3 from '../../assets/still_life3.png';
+import StillLife4 from '../../assets/still_life4.png';
+import StillLife5 from '../../assets/still_life5.png';
 
-import Oscillator1 from '../assets/oscillator1.gif';
-import Oscillator2 from '../assets/oscillator2.gif';
-import Oscillator3 from '../assets/oscillator3.gif';
-import Oscillator4 from '../assets/oscillator4.gif';
-import Oscillator5 from '../assets/oscillator5.gif';
+import Oscillator1 from '../../assets/oscillator1.gif';
+import Oscillator2 from '../../assets/oscillator2.gif';
+import Oscillator3 from '../../assets/oscillator3.gif';
+import Oscillator4 from '../../assets/oscillator4.gif';
+import Oscillator5 from '../../assets/oscillator5.gif';
 
-import Spaceship1 from '../assets/spaceship1.gif';
-import Spaceship2 from '../assets/spaceship2.gif';
-import Spaceship3 from '../assets/spaceship3.gif';
-import Spaceship4 from '../assets/spaceship4.gif';
+import Spaceship1 from '../../assets/spaceship1.gif';
+import Spaceship2 from '../../assets/spaceship2.gif';
+import Spaceship3 from '../../assets/spaceship3.gif';
+import Spaceship4 from '../../assets/spaceship4.gif';
+
+import './about.styles.scss';
 
 const About = () => {
     return (
@@ -90,7 +92,7 @@ const About = () => {
                     <img src={StillLife4} alt="boat" />
                     <img src={StillLife5} alt="tub" />
                 </div>
-                <div style={{ width: '90%', textAlign: 'left' }}>
+                <div className="exampleTextContainer">
                     <p>
                         An <strong>oscillator</strong> is a pattern that is a
                         predecessor of itself. That is, it is a pattern that
@@ -104,7 +106,7 @@ const About = () => {
                         <img src={Oscillator5} alt="penta" />
                     </div>
                 </div>
-                <div style={{ width: '90%', textAlign: 'left' }}>
+                <div className="exampleTextContainer">
                     <p>
                         A <strong>spaceship</strong> is a finite pattern that
                         returns to its initial state after a number of
