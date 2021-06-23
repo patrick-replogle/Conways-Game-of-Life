@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { createNewBoard, updateBoard } from '../functions/game';
-import { generateRandomBoard } from '../functions/presets';
+import { createNewBoard, updateBoard } from '../../functions/game';
+import { generateRandomBoard } from '../../functions/presets';
+
+import './buttons.styles.scss';
 
 const Buttons = ({
     board,

@@ -4,6 +4,8 @@ import githubFilled from '@iconify/icons-ant-design/github-filled';
 import portfolioIcon from '@iconify/icons-bytesize/portfolio';
 import linkedinFilled from '@iconify/icons-ant-design/linkedin-filled';
 
+import './footer.styles.scss';
+
 const Footer = () => {
     return (
         <div className="footer">

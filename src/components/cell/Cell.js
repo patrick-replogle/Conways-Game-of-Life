@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
+import './cell.styles.scss';
+
 const Cell = ({ square, board, isGenerating, cellColor }) => {
-    // eslint-disable-next-line
-    const [box, setBox] = useState(square.status);
+    const [, setBox] = useState(square.status);
 
     const toggleStatus = (square) => {
         const { status, location } = square;
