@@ -81,16 +81,18 @@ const About = () => {
 
             <div className="aboutTextContainer">
                 <h3>Example Patterns:</h3>
-                <p>
-                    A <strong>still life</strong> is a pattern that does not
-                    change from one generation to the next.
-                </p>
-                <div className="exampleContainer">
-                    <img src={StillLife1} alt="block" />
-                    <img src={StillLife2} alt="bee-hive" />
-                    <img src={StillLife3} alt="loaf" />
-                    <img src={StillLife4} alt="boat" />
-                    <img src={StillLife5} alt="tub" />
+                <div className="exampleTextContainer">
+                    <p>
+                        A <strong>still life</strong> is a pattern that does not
+                        change from one generation to the next.
+                    </p>
+                    <div className="exampleContainer">
+                        <img src={StillLife1} alt="block" className="img" />
+                        <img src={StillLife2} alt="bee-hive" className="img" />
+                        <img src={StillLife3} alt="loaf" className="img" />
+                        <img src={StillLife4} alt="boat" className="img" />
+                        <img src={StillLife5} alt="tub" className="img" />
+                    </div>
                 </div>
                 <div className="exampleTextContainer">
                     <p>
@@ -99,11 +101,11 @@ const About = () => {
                         repeats itself after a fixed number of generations
                     </p>
                     <div className="exampleContainer">
-                        <img src={Oscillator1} alt="blinker" />
-                        <img src={Oscillator2} alt="toad" />
-                        <img src={Oscillator3} alt="beacon" />
-                        <img src={Oscillator4} alt="pulsar" />
-                        <img src={Oscillator5} alt="penta" />
+                        <img src={Oscillator1} alt="blinker" className="img" />
+                        <img src={Oscillator2} alt="toad" className="img" />
+                        <img src={Oscillator3} alt="beacon" className="img" />
+                        <img src={Oscillator4} alt="pulsar" className="img" />
+                        <img src={Oscillator5} alt="penta" className="img" />
                     </div>
                 </div>
                 <div className="exampleTextContainer">
@@ -113,10 +115,10 @@ const About = () => {
                         generations, but in a different location
                     </p>
                     <div className="exampleContainer">
-                        <img src={Spaceship1} alt="glidar" />
-                        <img src={Spaceship2} alt="light" />
-                        <img src={Spaceship3} alt="middle" />
-                        <img src={Spaceship4} alt="heavy" />
+                        <img src={Spaceship1} alt="glidar" className="img" />
+                        <img src={Spaceship2} alt="light" className="img" />
+                        <img src={Spaceship3} alt="middle" className="img" />
+                        <img src={Spaceship4} alt="heavy" className="img" />
                     </div>
                 </div>
             </div>

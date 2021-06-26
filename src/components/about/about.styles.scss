@@ -3,15 +3,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .aboutTextContainer {
-    width: 90%;
-    text-align: left;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
     background: #303030;
     padding: 10px;
     border-radius: 10px;
     margin: 10px 0;
+    @media (max-width: 500px) {
+        width: 92%;
+    }
 }
 
 .exampleContainer {
@@ -23,9 +28,20 @@
     padding: 10px;
     border-radius: 10px;
     margin: 10px 0;
+    width: 100%;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    @media (max-width: 500px) {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .exampleTextContainer {
-    width: 90%; 
+    width: 100%;
     text-align: left;
 }
